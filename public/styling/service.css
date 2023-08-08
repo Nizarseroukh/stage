@@ -1,0 +1,117 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins" , sans-serif;
+    box-sizing: border-box;
+    transition: all.2s linear;
+    text-decoration: none;
+    border: none;
+}
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7em;
+    scroll-behavior: smooth;
+}
+body {
+    position: relative;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 8%;
+    height: 50px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+}
+header .logo {
+    color: #ea1f33;
+    font-size: 25px;
+    font-weight: bold;
+}
+header .logo span {
+    color: #000;
+}
+.menu {
+    display: flex;
+}
+.menu li {
+    list-style: none;
+    margin: 0 15px;
+}
+.menu li a {
+    font-size: 14px;
+    color: #000;
+    font-weight: 300;
+    transition: 0.2s;
+}
+.menu li a:hover {
+    color: #ea1f33;
+}
+header button {
+    background-color: #ea1f33;
+    cursor: pointer;
+    color: #fff;
+    padding: 5px 25px;
+}
+
+
+#services {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+}
+.list_services {
+    margin: 100px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.service {
+    width: 25%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    padding: 20px;
+    margin: 20px;
+}
+.service i {
+    font-size: 25px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ea1f33;
+    color: #fff;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+.service h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.service p {
+    font-size: 12px;
+}
+.service a {
+    margin-top: 10px;
+    color: #ea1f33;
+    padding: 5px 20px;
+    border: 1px solid #ea1f33;
+    font-size: 12px;
+}
