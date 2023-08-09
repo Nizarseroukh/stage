@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Car;
 
-use App\Models\Reservation; // Don't forget to import the Reservation model
+use App\Models\Reservation;
 
 class ResController extends Controller
 {
@@ -19,6 +20,7 @@ class ResController extends Controller
             'car_module' => 'required',
             'e_date' => 'required',
             's_date' => 'required',
+            'car_id' => 'required',
         ]);
 
         $reservation = new Reservation();
@@ -29,11 +31,24 @@ class ResController extends Controller
         $reservation->car_module = $validatedData['car_module'];
         $reservation->e_date = $validatedData['e_date'];
         $reservation->s_date = $validatedData['s_date'];
-        
+        $reservation->car_id = $validatedData['car_id'];
+
         // Additional fields and logic can be added here
-        
+
         $reservation->save();
 
         return redirect('/')->with('success', 'Reservation added successfully!');
+    }
+
+    public function markedone($id)
+    {
+        $reservation = Reservation::find($id);
+        $car = Car::find($reservation->car_id);
+        $car->quantite = $car->quantite - 1;
+        $car->save();
+        $reservation->done = 'yes';
+        $reservation->save();
+
+        return redirect('/adminpage')->with('success', 'Reservation marked as done!');
     }
 }

@@ -31,6 +31,8 @@
     <label for="s_date">S_date:</label>
     <input type="date" name="s_date" id="s_date">
 
+    <input type="hidden" name="car_id" value="{{$car->id}}">
+
     <input type="submit" value="Submit">
 </form>
 

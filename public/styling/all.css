@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container > * {
+    margin: 1rem;
+}
+
+.container > *:first-child {
+    margin-top: 0;
+}
+
+.btns {
+    display: flex;
+    gap: 1rem;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.tabels {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.table {
+    align-items: center;
+    width: 100%;
+    border: 1px solid black;
+}
+
+
+.table th {
+    text-align: left;
+    border: 1px solid black;
+
+}
+
+
+.reserve {
+    display: none;
+}
+
+.add_car {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.car_update {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal_bg
+{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+}

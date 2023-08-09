@@ -18,8 +18,10 @@ return new class extends Migration
             $table->string('phone_number');
             $table->string('car_type');
             $table->string('car_module');
+            $table->string('done')->default('no');
             $table->date('e_date');
             $table->date('s_date');
+            $table->unsignedBigInteger('car_id');
             $table->timestamps();
         });
     }
